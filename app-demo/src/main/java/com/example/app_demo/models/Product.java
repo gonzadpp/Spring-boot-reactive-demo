@@ -5,14 +5,14 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+@Document(collection = "products")
 public class Product {
 
     @Id
     private String id;
     private String name;
     private Double price;
-    private Date creatAt;
+    private Date createdAt;
 
     public Product(){}
 
@@ -37,16 +37,18 @@ public class Product {
     public void setPrice(Double price) {
         this.price = price;
     }
-    public Date getCreatAt() {
-        return creatAt;
+
+    public Date getCreatedAt() {
+        return createdAt;
     }
-    public void setCreatAt(Date creatAt) {
-        this.creatAt = creatAt;
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
     @Override
     public String toString() {
-        return "Products [id=" + id + ", name=" + name + ", price=" + price + ", creatAt=" + creatAt + "]";
+        return "Products [id=" + id + ", name=" + name + ", price=" + price + ", creatAt=" + createdAt + "]";
     }
 
     
