@@ -1,7 +1,5 @@
 package com.example.app_demo;
 
-import java.util.Date;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -9,10 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 
-import com.example.app_demo.models.Product;
 import com.example.app_demo.repository.ProductRepository;
-
-import reactor.core.publisher.Flux;
 
 @SpringBootApplication
 public class AppDemoApplication implements CommandLineRunner {
